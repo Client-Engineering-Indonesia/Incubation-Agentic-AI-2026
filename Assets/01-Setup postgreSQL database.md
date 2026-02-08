@@ -142,3 +142,14 @@ chmod +x init-db.sh
 
 Now PostgreSQL is deployed and accessible through public network.
 
+You can try accessing PostgreSQL using this credentials:
+
+```
+URL=<check your environment page>
+USER=postgres
+PASSWORD=postgres
+DB=watsonxdb
+PORT=8443
+```
+
+![Postgre Preview](images/03/02.png)
