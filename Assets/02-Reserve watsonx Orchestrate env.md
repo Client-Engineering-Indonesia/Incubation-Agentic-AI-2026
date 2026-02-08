@@ -108,3 +108,9 @@ Once provisioning is complete:
 ---
 
 You’re all set! 🚀
+
+## Additional reservation for participants
+
+There is also a case where you must provide environment for the participants. For this case you use "watsonx.ai/.governance w/Student ID" in Techzone environment. Once it is ready, you will be receiving URL, username and password that can be used for the participants. The environment is optimal for 1 participant, so if you have 10 participants it is recommended to reserve 10 environments.
+
+![watsonx with student id](images/04/11.png)
