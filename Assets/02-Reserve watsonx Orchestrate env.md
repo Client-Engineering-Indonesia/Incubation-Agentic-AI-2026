@@ -105,6 +105,14 @@ Once provisioning is complete:
 
 ![Access watsonx Orchestrate Homepage](images/04/10.png)
 
+### 11. Save watsonx Orchestrate credentials
+- You also need to store watsonx Orchestrate **APIKEY** and **Instance URL**
+- To do this, go to your watsonx Orchestrate instance page in IBM Cloud
+- Put it somewhere in your local because you will use it in next sessions
+
+<img width="851" height="585" alt="image" src="https://github.com/user-attachments/assets/8c9862d0-5b4b-4843-8aa5-97bc537bd07e" />
+
+
 ---
 
 You’re all set! 🚀
