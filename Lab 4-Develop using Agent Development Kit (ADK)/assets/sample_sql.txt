@@ -1,0 +1,6 @@
+SELECT
+    DATE_TRUNC('month', datetime) AS year_month,
+    SUM("money")                  AS total_money
+FROM coffee_sales
+GROUP BY DATE_TRUNC('month', datetime)
+ORDER BY year_month;

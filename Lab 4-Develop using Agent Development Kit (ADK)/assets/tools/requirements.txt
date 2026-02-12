@@ -1,0 +1,15 @@
+# Requirements for watsonx Orchestrate ADK Tools
+# Install with: pip install -r requirements.txt
+
+# PostgreSQL Database Adapter
+psycopg2-binary>=2.9.0
+
+# Environment Variables Management
+python-dotenv>=1.0.0
+
+# watsonx Orchestrate Agent Development Kit
+ibm-watsonx-orchestrate-adk>=1.0.0
+
+# Optional: Additional utilities
+requests>=2.31.0
+pyyaml>=6.0

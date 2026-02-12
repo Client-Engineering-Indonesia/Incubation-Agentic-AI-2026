@@ -4,7 +4,7 @@
 
 ## Overview
 
-Welcome to Lab 3! In this lab, you'll learn how to use the **Agent Development Kit (ADK)** to build sophisticated agentic AI applications programmatically. The ADK provides a powerful Python-based framework for creating custom agents, tools, and workflows that go beyond the capabilities of the visual agent builders.
+Welcome to Lab 4! In this lab, you'll learn how to use the **Agent Development Kit (ADK)** to build sophisticated agentic AI applications programmatically. The ADK provides a powerful Python-based framework for creating custom agents, tools, and workflows that go beyond the capabilities of the visual agent builders.
 
 **What is Agent Development Kit (ADK)?**
 
@@ -101,54 +101,36 @@ Install and configure the Agent Development Kit on your local machine, including
 
 ---
 
-### 📙 Module 2.3: Create Python-Based Tool
-**Duration:** ~40 minutes
+### 📙 Module 2.3: Create Local Environment
+**Duration:** ~25 minutes
 
-Build custom Python tools that can be used by your agents to perform specific tasks and operations.
+Configure your local development environment to connect with remote watsonx Orchestrate instances.
 
 **Topics Covered:**
-- Tool structure and anatomy
-- Implementing tool functions
-- Adding parameters and validation
-- Error handling and logging
-- Testing tools locally
-- Registering tools with ADK
+- Understanding watsonx Orchestrate environments
+- Obtaining API credentials
+- Adding remote environments to ADK CLI
+- Activating and authenticating environments
+- Managing multiple environments
 
-👉 **[Start Module 2.3: Create Python-Based Tool](2.3-Creata%20python-based%20tool.md)**
+👉 **[Start Module 2.3: Create Local Environment](2.3-Create%20local%20environment.md)**
 
 ---
 
-### 📕 Module 2.4: Create Agent Using ADK
-**Duration:** ~45 minutes
+### 📕 Module 2.4: Create Python Tool and Agent Using ADK
+**Duration:** ~60 minutes
 
-Develop complete AI agents programmatically using the ADK, including configuration, tool integration, and deployment.
-
-**Topics Covered:**
-- Agent configuration in code
-- Adding instructions and behavior
-- Integrating custom tools
-- Implementing guidelines programmatically
-- Testing agents locally
-- Deploying agents to watsonx Orchestrate
-
-👉 **[Start Module 2.4: Create Agent Using ADK](2.4-Create%20agent%20using%20ADK.md)**
-
----
-
-### 📓 Module 2.5: Create Document Extraction Flow
-**Duration:** ~50 minutes
-
-Build end-to-end document processing workflows that extract, transform, and utilize data from various document formats.
+Build custom Python tools and intelligent agents that work together to perform SQL analysis on coffee sales data.
 
 **Topics Covered:**
-- Document parsing and extraction
-- Data transformation and validation
-- Multi-document processing
-- Integration with agents
-- Error handling and recovery
-- Performance optimization
+- Creating custom Python tools for SQL execution
+- Building SQL Translator Agent (natural language to SQL)
+- Building Data Analyst Agent (comprehensive analysis)
+- Agent collaboration and tool integration
+- Importing tools and agents to watsonx Orchestrate
+- Testing multi-agent workflows
 
-👉 **[Start Module 2.5: Create Document Extraction Flow](2.5-Create%20document%20extraction%20flow.md)**
+👉 **[Start Module 2.4: Create Python Tool and Agent Using ADK](2.4-Create%20python%20tool%20and%20agent%20using%20ADK.md)**
 
 ---
 
@@ -328,13 +310,20 @@ Once you're ready, start with Module 2.1 to set up your connection.
 ## Lab Structure
 
 ```
-Lab 3-Develop Agentic AI using Agent Development Kit (ADK)/
+Lab 4-Develop using Agent Development Kit (ADK)/
 ├── README.md (this file)
 ├── 2.1-Creating connection.md
 ├── 2.2-Install ADK.md
-├── 2.3-Creata python-based tool.md
-├── 2.4-Create agent using ADK.md
-├── 2.5-Create document extraction flow.md
+├── 2.3-Create local environment.md
+├── 2.4-Create python tool and agent using ADK.md
+├── assets/
+│   ├── .env
+│   ├── tools/
+│   │   ├── execute_sql_stmt.py
+│   │   └── requirements.txt
+│   └── agents/
+│       ├── sql_translator_agent.yaml
+│       └── data_analyst_agent.yaml
 └── images/
     └── (screenshots and diagrams)
 ```
@@ -362,23 +351,6 @@ Lab 3-Develop Agentic AI using Agent Development Kit (ADK)/
 - Python Test Explorer
 - GitLens
 - YAML
-
-### Setting Up VS Code
-
-```json
-// .vscode/settings.json
-{
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.formatting.provider": "black",
-  "python.testing.pytestEnabled": true,
-  "editor.formatOnSave": true,
-  "files.exclude": {
-    "**/__pycache__": true,
-    "**/*.pyc": true
-  }
-}
-```
 
 ---
 
@@ -534,20 +506,20 @@ If you encounter issues:
 ### Lab Modules
 1. 📘 [Module 2.1: Creating Connection](2.1-Creating%20connection.md)
 2. 📗 [Module 2.2: Install ADK](2.2-Install%20ADK.md)
-3. 📙 [Module 2.3: Create Python-Based Tool](2.3-Creata%20python-based%20tool.md)
-4. 📕 [Module 2.4: Create Agent Using ADK](2.4-Create%20agent%20using%20ADK.md)
-5. 📓 [Module 2.5: Create Document Extraction Flow](2.5-Create%20document%20extraction%20flow.md)
+3. 📙 [Module 2.3: Create Local Environment](2.3-Create%20local%20environment.md)
+4. 📕 [Module 2.4: Create Python Tool and Agent Using ADK](2.4-Create%20python%20tool%20and%20agent%20using%20ADK.md)
 
 ---
 
 ## Summary
 
 In this lab, you will:
-- ✅ Master the Agent Development Kit (ADK)
-- ✅ Build custom Python tools
-- ✅ Create agents programmatically
-- ✅ Implement document extraction workflows
-- ✅ Deploy production-ready agentic AI applications
+- ✅ Set up connections in watsonx Orchestrate
+- ✅ Install and configure the Agent Development Kit (ADK)
+- ✅ Configure local environment to connect with remote watsonx Orchestrate
+- ✅ Build custom Python tools for SQL execution
+- ✅ Create intelligent agents that collaborate (SQL Translator + Data Analyst)
+- ✅ Deploy and test multi-agent workflows
 
 **Ready to begin?** Start with [Module 2.1: Creating Connection](2.1-Creating%20connection.md)
 
@@ -557,33 +529,28 @@ In this lab, you will:
 
 By the end of this lab, you'll have:
 
-1. **Development Environment**: Fully configured ADK development setup
-2. **Custom Tools**: Reusable Python tools for various tasks
-3. **Programmatic Agent**: Agent created and deployed using code
-4. **Document Processor**: End-to-end document extraction workflow
-5. **Deployment Pipeline**: Automated deployment process
+1. **Development Environment**: Fully configured ADK development setup with remote environment connection
+2. **PostgreSQL Connection**: Secure connection to PostgreSQL database for coffee sales data
+3. **SQL Execution Tool**: Custom Python tool that safely executes SQL queries
+4. **SQL Translator Agent**: Agent that converts natural language to SQL queries
+5. **Data Analyst Agent**: Intelligent agent that performs comprehensive data analysis
+6. **Multi-Agent Workflow**: Working example of agent collaboration and tool integration
 
-**Example Project Structure:**
+**Project Structure:**
 ```
-my-adk-project/
-├── tools/
-│   ├── __init__.py
-│   ├── text_processor.py
-│   ├── data_extractor.py
-│   └── api_connector.py
-├── agents/
-│   ├── __init__.py
-│   └── customer_support_agent.py
-├── flows/
-│   ├── __init__.py
-│   └── document_extraction_flow.py
-├── tests/
-│   ├── test_tools.py
-│   ├── test_agents.py
-│   └── test_flows.py
-├── config/
-│   └── config.yaml
-├── requirements.txt
+Lab 4-Develop using Agent Development Kit (ADK)/
+├── assets/
+│   ├── tools/
+│   │   ├── execute_sql_stmt.py      # SQL execution tool
+│   │   └── requirements.txt         # Python dependencies
+│   ├── agents/
+│   │   ├── sql_translator_agent.yaml    # Natural language to SQL
+│   │   └── data_analyst_agent.yaml      # Data analysis agent
+│   └── .env                         # Environment variables
+├── 2.1-Creating connection.md
+├── 2.2-Install ADK.md
+├── 2.3-Create local environment.md
+├── 2.4-Create python tool and agent using ADK.md
 └── README.md
 ```
 
